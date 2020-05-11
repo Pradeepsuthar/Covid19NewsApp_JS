@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Covid19 News</title>
+  </head>
+  <body>
+      <!-- NavBar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-color d-flex justify-content-between border-bottom">
+        <a class="navbar-brand" href="index.html">Covid19 News</a>
+        <span class="navbar-text">
+          <a href="about.html">About</a>
+        </span>
+      </nav>
+
+      <!-- Covid19 Summary -->
+      
+        <div class="card shadow-sm container-fluid p-3">
+          <h5 class="text-left font-weight-normal">Global</h5><hr>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                New Confirmed Case
+              <span id="NewConfirmed"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Total Confirmed Case
+              <span id="TotalConfirmed"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                New Deaths
+              <span id="NewDeaths"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Total Deaths Case
+              <span id="TotalDeaths"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                New Recovered Case
+              <span id="NewRecovered"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Total Recovered
+              <span id="TotalRecovered"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- <div class="card shadow-sm container-fluid mt-3 p-3">
+        <h5 class="text-left font-weight-normal">Recent</h5>
+        <hr>
+        <div class="row">
+          <div class="col-12">
+            <div class="list-group" id="imgGallery">
+                <a href="#" class="list-group-item list-group-item-action border shadow-sm">
+                    <div class="d-flex w-100 justify-content-between">
+                      <p class="mb-0 text-truncate hover"><i class="fa fa-user"></i> ${siteTemplateData['Country']}</p>
+                      <small class="text-muted"><i class="fa fa-clock-o"></i> ${siteTemplateData['Date']}</small>
+                    </div>
+                    <span class="text-muted d-inline-block text-truncate" style="max-width: 200px;">
+                    NewConfirmed 2343, TotalConfirmed 6436, NewDeaths 734, TotalDeaths 4729, NewRecovered 878
+                    </span>
+                  </a>   
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+      <div class="card shadow-sm container-fluid mt-3 p-3">
+        <h5 class="text-left font-weight-normal">Country Wise Data</h5>
+        <hr>
+        <div class="row">
+          <div class="col-12 p-0" id="countrywisedata">
+
+          </div>
+        </div>
+      </div>
+  
+
+    <!-- Optional JavaScript -->
+    <script src="js/app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
