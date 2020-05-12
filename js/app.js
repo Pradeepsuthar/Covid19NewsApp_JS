@@ -5,8 +5,6 @@ fetch('https://api.covid19api.com/summary').then(function (response) {
     // global = data['Global']
     getData(data)
     CountryWiseData(data)
-
-
 }).catch(function () {
     console.log("Booo");
 });
@@ -27,20 +25,18 @@ function CountryWiseData(data) {
     let html = "";
     countrywisedataObj.forEach(function (siteTemplateData, i) {
         html += `              
-              <div class="card mb-1 shadow-sm rounded-0 border-0">
-                    <div class="card-body">
-                      <h5 class="card-title">${siteTemplateData['Country']}</h5>
-                      <h6 class="card-subtitle mb-2 text-muted">${siteTemplateData['Date']}</h6>
-                      <div class="my-2">
-                        <p class="card-text my-0">New Confirmed ${siteTemplateData['NewConfirmed']}</p>
-                        <p class="card-text my-0">Total Confirmed ${siteTemplateData['TotalConfirmed']}</p>
-                        <p class="card-text my-0">New Deaths ${siteTemplateData['NewDeaths']}</p>
-                        <p class="card-text my-0">Total Deaths ${siteTemplateData['TotalDeaths']}</p>
-                        <p class="card-text my-0">New Recovered ${siteTemplateData['NewRecovered']}</p>
-                        <p class="card-text my-0">Total Recovered ${siteTemplateData['TotalRecovered']}</p>
-                      </div>
-                    </div>
-                  </div>
+            <li class="list-group-item rounded-0">
+              <h5>${siteTemplateData['Country']}</h5>
+              <p>${siteTemplateData['Date']}</p>
+              <div class="my-2">
+                  <p class="card-text my-0 d-flex justify-content-between"><span>New Confirmed</span> <span>${siteTemplateData['NewConfirmed']}</span></p>
+                  <p class="card-text my-0 d-flex justify-content-between"><span>Total Confirmed</span> <span>${siteTemplateData['TotalConfirmed']}</span></p>
+                  <p class="card-text my-0 d-flex justify-content-between"><span>New Deaths</span> <span>${siteTemplateData['NewDeaths']}</span></p>
+                  <p class="card-text my-0 d-flex justify-content-between"><span>Total Deaths</span> <span>${siteTemplateData['TotalDeaths']}</span></p>
+                  <p class="card-text my-0 d-flex justify-content-between"><span>New Recovered</span> <span>${siteTemplateData['NewRecovered']}</span></p>
+                  <p class="card-text my-0 d-flex justify-content-between"><span>Total Recovered</span> <span>${siteTemplateData['TotalRecovered']}</span></p>
+                </div>
+            </li>
             `;
     });
     let nodeElm = document.getElementById("countrywisedata");

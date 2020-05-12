@@ -37,8 +37,8 @@
 
   <!-- Covid19 Summary -->
 
-  <div class="card shadow-sm container-fluid p-3">
-    <h5 class="text-left font-weight-normal">Global</h5>
+  <div class="card border-0 container-fluid p-3 my-0">
+    <h5 class="text-left font-weight-normal"><i class="fa fa-globe"></i> Worldwide Cases</h5>
     <hr>
     <ul class="list-group">
       <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -67,13 +67,16 @@
       </li>
     </ul>
   </div>
-  </div>
-  <div class="card shadow-sm container-fluid mt-3 p-3">
+
+
+  <div class="card border-0 container-fluid p-3">
     <h5 class="text-left font-weight-normal">Country Wise Data</h5>
     <hr>
     <div class="row">
-      <div class="col-12 p-0" id="countrywisedata">
+      <div class="col-12 p-0">
+        <ul class="list-group infoCardDiv" id="countrywisedata">
 
+        </ul>
       </div>
     </div>
   </div>
@@ -81,16 +84,20 @@
   <footer class="footer mt-auto fixed-bottom bg-white border-top d-block d-md-none d-lg-none d-xl-none p-2">
     <ul class="nav d-flex justify-content-around">
       <li class="nav-item">
-        <a href="index.html" class="btn-lg nav-link bg-transparent border-0 footer-menu-btn"><i class="fa fa-home"></i></a>
+        <a href="index.html" class="btn-lg nav-link bg-transparent border-0 footer-menu-btn"><i
+            class="fa fa-home"></i></a>
       </li>
       <li class="nav-item">
-        <a href="404.html" class="btn-lg nav-link bg-transparent border-0 footer-menu-btn"><i class="fa fa-history"></i></a>
+        <a href="404.html" class="btn-lg nav-link bg-transparent border-0 footer-menu-btn"><i
+            class="fa fa-history"></i></a>
       </li>
       <li class="nav-item">
-        <a href="404.html" class="btn-lg nav-link bg-transparent border-0 footer-menu-btn"><i class="fa fa-shopping-cart"></i></a>
+        <a href="404.html" class="btn-lg nav-link bg-transparent border-0 footer-menu-btn"><i
+            class="fa fa-shopping-cart"></i></a>
       </li>
       <li class="nav-item">
-        <a href="404.html" class="btn-lg nav-link bg-transparent border-0 footer-menu-btn"><i class="fa fa-user"></i></a>
+        <a href="404.html" class="btn-lg nav-link bg-transparent border-0 footer-menu-btn"><i
+            class="fa fa-user"></i></a>
       </li>
     </ul>
   </footer>
@@ -114,20 +121,26 @@
       autoplayTimeout: 3000,
       autoplayHoverPause: false
     });
-
-
   </script>
-</body>
-
-</html>
-
-
-<!-- Optional JavaScript -->
-<script src="js/app.js"></script>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script>
+    function search() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("searchItem");
+      filter = input.value.toUpperCase();
+      console.log(filter)
+      ul = document.getElementsByClassName("infoCardDiv");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("h5")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
 
 </html>
