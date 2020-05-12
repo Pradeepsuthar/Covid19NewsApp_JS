@@ -1,60 +1,75 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Covid19 News</title>
-  </head>
-  <body>
-      <!-- NavBar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-color d-flex justify-content-between border-bottom">
-        <a class="navbar-brand" href="index.html">Covid19 News</a>
-        <span class="navbar-text">
-          <a href="about.html">About</a>
-        </span>
-      </nav>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-      <!-- Covid19 Summary -->
-      
-        <div class="card shadow-sm container-fluid p-3">
-          <h5 class="text-left font-weight-normal">Global</h5><hr>
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                New Confirmed Case
-              <span id="NewConfirmed"></span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                Total Confirmed Case
-              <span id="TotalConfirmed"></span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                New Deaths
-              <span id="NewDeaths"></span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                Total Deaths Case
-              <span id="TotalDeaths"></span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                New Recovered Case
-              <span id="NewRecovered"></span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                Total Recovered
-              <span id="TotalRecovered"></span>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <title>Covid19 News</title>
+</head>
+
+<body>
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-color d-flex justify-content-between border-bottom">
+    <a class="navbar-brand" href="index.html">Covid19 News</a>
+    <span class="navbar-text">
+      <a href="about.html">About</a>
+    </span>
+  </nav>
+
+  <!-- Set up your HTML -->
+  <div class="owl-carousel">
+    <div>
+      <img src="https://www.digitalsignageconnection.com/wp-content/uploads/2020-03-COVID19-v2-ASB-02-1.jpg">
+    </div>
+    <div>
+      <img src="https://image.freepik.com/free-psd/covid-19-banner-template-with-illustration_23-2148507611.jpg">
+    </div>
+  </div>
+
+  <!-- Covid19 Summary -->
+
+  <div class="card shadow-sm container-fluid p-3">
+    <h5 class="text-left font-weight-normal">Global</h5>
+    <hr>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        New Confirmed Case
+        <span id="NewConfirmed"></span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Total Confirmed Case
+        <span id="TotalConfirmed"></span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        New Deaths
+        <span id="NewDeaths"></span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Total Deaths Case
+        <span id="TotalDeaths"></span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        New Recovered Case
+        <span id="NewRecovered"></span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Total Recovered
+        <span id="TotalRecovered"></span>
+      </li>
+    </ul>
+  </div>
+  </div>
 
 
-      <!-- <div class="card shadow-sm container-fluid mt-3 p-3">
+  <!-- <div class="card shadow-sm container-fluid mt-3 p-3">
         <h5 class="text-left font-weight-normal">Recent</h5>
         <hr>
         <div class="row">
@@ -75,22 +90,39 @@
       </div> -->
 
 
-      <div class="card shadow-sm container-fluid mt-3 p-3">
-        <h5 class="text-left font-weight-normal">Country Wise Data</h5>
-        <hr>
-        <div class="row">
-          <div class="col-12 p-0" id="countrywisedata">
+  <div class="card shadow-sm container-fluid mt-3 p-3">
+    <h5 class="text-left font-weight-normal">Country Wise Data</h5>
+    <hr>
+    <div class="row">
+      <div class="col-12 p-0" id="countrywisedata">
 
-          </div>
-        </div>
       </div>
-  
+    </div>
+  </div>
 
-    <!-- Optional JavaScript -->
-    <script src="js/app.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  </body>
+
+  <!-- Optional JavaScript -->
+  <script src="js/app.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <script src="js/owl.carousel.min.js"></script>
+  <script>
+    // Carousel
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: false
+    });
+
+
+  </script>
+</body>
+
 </html>
