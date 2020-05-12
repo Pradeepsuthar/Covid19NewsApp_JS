@@ -1,3 +1,17 @@
 .bg-color{
     background-color: #EF5B25;
 }
+
+
+/* footer menu buttons */
+
+.footer-menu-btn:focus{
+    outline: none;
+}
+.footer-menu-btn i{
+    font-size: 23px;
+}
+
+.fa{
+  color: #EF5B25;
+}
